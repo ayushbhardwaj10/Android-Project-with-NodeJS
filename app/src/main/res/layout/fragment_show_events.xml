@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FavouriteFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activityRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@color/customGreen" />
+
+        <TextView
+            android:id="@+id/backBtnNoEvent"
+            android:layout_width="252dp"
+            android:layout_height="45dp"
+            android:background="@drawable/noevent_roundedtext"
+            android:gravity="center"
+            android:text="No Events Found"
+            android:textColor="@color/customGreen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/progressBarEventDetails"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="63dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="329dp"
+            android:layout_marginEnd="187dp"
+            android:layout_marginBottom="336dp"
+            android:indeterminateTint="#4ec31c"
+            android:indeterminateTintMode="src_atop" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BackBtn"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="172dp"
+        android:background="@android:color/transparent"
+        android:text="Back to Search"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textStyle="bold"></androidx.appcompat.widget.AppCompatButton>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/gobackarrow" />
+
+</RelativeLayout>

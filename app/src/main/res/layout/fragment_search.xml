@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="350dp"
+        android:layout_height="570dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_rounded">
+
+        <!-- Add your views inside the ConstraintLayout here -->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keyword*"
+            android:textColor="@color/customGreen"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.069" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category*"
+            android:textColor="@color/customGreen"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.473" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location*"
+            android:textColor="@color/customGreen"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.644" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance(Miles)*"
+            android:textColor="@color/customGreen"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.283" />
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/keyword"-->
+        <!--            android:layout_width="286dp"-->
+        <!--            android:layout_height="42dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:inputType="textPersonName"-->
+        <!--            android:textColor="#EDE8E8"-->
+        <!--            android:textColorHighlight="#4EC31C"-->
+        <!--            android:textColorHint="#877878"-->
+        <!--            android:textColorLink="#4ec31c"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView"-->
+        <!--            app:layout_constraintVertical_bias="0.023" />-->
+
+        <!--        <EditText-->
+        <!--            android:id="@+id/keyword"-->
+        <!--            android:layout_width="286dp"-->
+        <!--            android:layout_height="42dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="Enter the Keyword"-->
+        <!--            android:inputType="textPersonName"-->
+        <!--            android:textColor="#EDE8E8"-->
+        <!--            android:textColorHighlight="#4EC31C"-->
+        <!--            android:textColorHint="#877878"-->
+        <!--            android:textColorLink="#4ec31c"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView"-->
+        <!--            app:layout_constraintVertical_bias="0.023" />-->
+
+        <AutoCompleteTextView
+            android:id="@+id/keyword"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="Enter the Keyword"
+            android:text=""
+            android:textColor="#EDE8E8"
+            android:textColorHighlight="#4EC31C"
+            android:textColorHint="#877878"
+            android:textColorLink="#4ec31c"
+            android:theme="@style/MyAutocompleteStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.139">
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+        <ProgressBar
+            android:id="@+id/loading_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.950"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="#4ec31c"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="286dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:hint="Enter the Location"
+            android:inputType="textPersonName"
+            android:textColor="#EDE8E8"
+            android:textColorHighlight="#4EC31C"
+            android:textColorHint="#877878"
+            android:textColorLink="#4ec31c"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.546"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.131" />
+
+        <EditText
+            android:id="@+id/distance"
+            android:layout_width="286dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="10"
+            android:textColor="#EDE8E8"
+            android:textColorHighlight="#4EC31C"
+            android:textColorHint="#877878"
+            android:textColorLink="#4ec31c"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.271" />
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner"
+            android:layout_width="293dp"
+            android:layout_height="33dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.596"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/distance"
+            app:layout_constraintVertical_bias="0.216"></androidx.appcompat.widget.AppCompatSpinner>
+
+        <Switch
+            android:id="@+id/autoDetectSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auto-detect"
+            android:textColor="#cbcbcb"
+            android:thumbTint="#cbcbcb"
+            android:trackTint="#cbcbcb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.664"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/spinner"
+            app:layout_constraintVertical_bias="0.084" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/search_btn_bg"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location"
+            app:layout_constraintVertical_bias="0.38">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clear"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/clear_btn_bg"
+            android:text="Clear"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.941"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location"
+            app:layout_constraintVertical_bias="0.381"></androidx.appcompat.widget.AppCompatButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
